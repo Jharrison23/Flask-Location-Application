@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<!-- -->
 <html>
-    <head>
-        <link href='http://fonts.google.apis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
-        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <h1 class="title">Learning Flask</h1>
-            </div>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="title">Learning Flask</h1>
+      </div>
+    </header>
 
-        </header>
+    {% block content %}
+    {% endblock %}
 
-        {% block content %}
-        {% endblock %}
-
-    </body>
+  </body>
 </html>
