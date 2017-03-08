@@ -1,11 +1,17 @@
 # import the class and function render template
 from flask import Flask, render_template
 
+# import the db object from models, db is the variable with the database instance
+from models import db
+
 # Create and store a useable instance of the flask class
 app = Flask(__name__)
 
 # Configure flask app to use the learningFlask database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/learningFlask'
+
+# initialize the flask app for using this database setup
+db.init_app(app)
 
 # Map the URL "/" to the python function index which opens index.html
 @app.route("/")
